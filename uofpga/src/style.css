@@ -221,3 +221,48 @@ nav ul li a:hover {
   color: #ffdd57;
   text-shadow: 0px 0px 10px #ffdd57;
 }
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.team-member {
+  flex: 1 1 200px; /* grow, shrink, base width */
+  max-width: 220px;
+  text-align: center;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1rem;
+  background-color: #e0e0e0; /* optional: fallback background */
+}
+
+.team-member h3 {
+  margin: 0.5rem 0 0.2rem;
+  color:black
+}
+
+.team-member p {
+  font-size: 0.95rem;
+  color: black;
+}
+
+.team-member a {
+  text-decoration: none;
+  color: #0077b5;
+  font-weight: bold;
+}
