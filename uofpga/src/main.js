@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
         const header = document.querySelector("header");
         if (window.scrollY > 50) {
-            header.style.background = "rgba(90, 24, 154, 0.9)";
-            header.style.transition = "background 0.3s ease";
+            header.classList.add("scrolled");
         } else {
-            header.style.background = "linear-gradient(135deg, #5a189a, #9d4edd)";
+            header.classList.remove("scrolled");
         }
     });
+    
 
     // Smooth scrolling for anchor links
     document.querySelectorAll("a[href^='#']").forEach(anchor => {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Animated text appearance effect
-    const animatedText = document.querySelector(".animated-text");
+    const animatedText = document.querySelector(".text");
     animatedText.style.opacity = "0";
     setTimeout(() => {
         animatedText.style.opacity = "1";
