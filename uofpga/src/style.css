@@ -7,14 +7,18 @@ body {
   color: white;
   text-align: left;
   overflow-x: hidden;
+
 }
 
-
+/* Chrome, Edge, Safari */
+body::-webkit-scrollbar {
+  display: none;
+}
 
 /* Navbar */
 header {
   margin: 30px auto;
-  margin-left: 5%;
+  margin-left: 4%;
   width: fit-content;
   padding: 0.8rem 2rem;
   border-radius: 15px / 15px; /* squircle-ish shape */
@@ -25,6 +29,37 @@ header {
   position: relative;
   z-index: 999;
   transition: background 0.3s ease;
+}
+
+.social-icons {
+  position: absolute;
+  top: 30px;
+  right: 5%;
+  display: flex;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); /* make icons white if they're dark */
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+
+.logo-overlay {
+  position: absolute;
+  top: 20px; /* adjust to fit */
+  right: 15px; /* adjust to fit */
+  width: 40px; /* or whatever size fits */
+  height: 40px;
+  z-index: 10; /* above triangle layers */
 }
 
 header.scrolled {
@@ -57,10 +92,6 @@ nav ul li a:hover {
   text-shadow: 0px 0px 10px #ffdd57;
 }
 
-/* Main */
-main {
-}
-
 /* Hero Section */
 .hero {
   display: flex;
@@ -73,7 +104,7 @@ main {
 }
 
 .hero .text {
-  max-width: 50%;
+  max-width: 60%;
 }
 
 /* First Triangle */
@@ -138,7 +169,8 @@ main {
 
 /* Animated Text */
 .animated-text {
-  font-size: 3rem;
+  margin-top: 15px;
+  font-size: 4rem;
   font-weight: 700;
   animation: fadeIn 2s ease-in-out;
 }
@@ -157,7 +189,7 @@ main {
 /* Socials Section */
 .socials {
   padding: 40px 5%;
-  text-align: left;
+  text-align: center;
 }
 
 .socials h2 {
