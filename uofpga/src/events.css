@@ -1,0 +1,212 @@
+/* EVENTS PAGE THEME (Matches main.css) */
+
+body {
+    background: linear-gradient(to bottom right, #100016, #25003c, #4b007c, #7e3dbb);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    margin: 30px 0 -10px 4%;
+    margin-left: 4%;
+    width: fit-content;
+    padding: 0.8rem 2rem;
+    border-radius: 15px / 15px;
+    background: rgba(90, 24, 154, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 999;
+    transition: background 0.3s ease;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #e8d1ee;
+    text-shadow: 0px 0px 10px #fab7f0;
+  }
+  
+  main {
+    padding: -10px 5% 2rem 5%;
+  }
+  
+  /* Timeline Section */
+  .timeline-banner {
+    padding: 0.5rem 5% 4rem;
+    text-align: center;
+  }
+  
+
+  
+  .timeline-banner h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .timeline-row {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  
+  .timeline-card {
+    background: rgba(192, 120, 120, 0.06);
+    border-radius: 16px;
+    padding: 1rem 1.5rem;
+    min-width: 160px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .timeline-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-4px);
+  }
+  
+  .timeline-date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffdd57;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #eee;
+  }
+  
+  .timeline-card.highlight {
+    border: 2px solid #ffdd57;
+  }
+  
+  /* Calendar Section */
+  .calendar-section {
+    padding: 3rem 5%;
+    color: white;
+    text-align: center;
+  }
+  
+  .calendar-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .calendar-header h3 {
+    font-size: 1.5rem;
+    color: #ffddff;
+    margin-bottom: 1rem;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .calendar-day,
+  .calendar-grid div {
+    background-color: rgba(255, 255, 255, 0.06);
+    padding: 0.8rem 0;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+  }
+  
+  .calendar-day:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  
+  .event-day {
+    background-color: #ffdd57;
+    color: #1a0033;
+  }
+  
+  .empty {
+    background: none;
+  }
+  
+  /* Event Cards */
+  .event-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .event-card {
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(10px);
+  }
+  
+  .event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
+  
+  .event-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #ffddff;
+  }
+  
+  .event-card p {
+    font-size: 0.95rem;
+    margin: 0.2rem 0;
+    color: #e5e5e5;
+  }
+  
+  .event-card .tags {
+    margin: 0.8rem 0;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #ffcaff;
+  }
+  
+  /* Reusable button styling */
+  .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color: #6c2bd9;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #875af5;
+  }
+  

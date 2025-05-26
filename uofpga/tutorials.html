@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>uoFPGA - Tutorials</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/tutorials.css" />
+  <script defer src="src/tutorials.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="tutorials.html">Tutorials</a></li>
+        <li><a href="About.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="tutorial-layout">
+    <aside class="sidebar">
+      <h2>Tutorial Categories</h2>
+      <ul>
+        <li><a href="#" class="active" data-filter="beginner">Beginner</a></li>
+        <li><a href="#" data-filter="intermediate">Intermediate</a></li>
+        <li><a href="#" data-filter="advanced">Advanced</a></li>
+        <li><a href="#" data-filter="all">Show All</a></li>
+      </ul>
+    </aside>
+
+    <section class="tutorials-content">
+      <div class="tutorial-card" data-category="beginner">
+        <h3>Intro to Verilog</h3>
+        <p class="tags">Beginner | ⌨️ HDL Basics</p>
+        <p class="desc">Get started with Verilog syntax, modules, and simulation basics using Quartus Prime.</p>
+        <a href="#" class="btn">View Tutorial</a>
+      </div>
+
+      <div class="tutorial-card" data-category="intermediate">
+        <h3>Building with Finite State Machines</h3>
+        <p class="tags">Intermediate | 🧠 FSM Design</p>
+        <p class="desc">Learn how to implement FSMs in Verilog to control sequential logic behaviors.</p>
+        <a href="#" class="btn">View Tutorial</a>
+      </div>
+
+      <div class="tutorial-card" data-category="advanced">
+        <h3>Custom VGA Controller</h3>
+        <p class="tags">Advanced | 📺 Display Systems</p>
+        <p class="desc">Step-by-step guide to building a VGA signal generator using counters and timing logic.</p>
+        <a href="#" class="btn">View Tutorial</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
