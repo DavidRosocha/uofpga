@@ -5,31 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>uoFPGA - Events</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/events.css">
-    <script type="module" src="./src/events.js"></script>
+    <link rel="stylesheet" href="/src/events.css">
+    <script type="module" src="/src/events.js"></script>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="tutorials.html">Tutorials</a></li>
-                <li><a href="About.html">About</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/events">Events</a></li>
+                <li><a href="/tutorials">Tutorials</a></li>
+                <li><a href="/about">About</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-          
-          <!-- ✅ Calendar is now outside and flows properly -->
-          <section class="calendar-section">
+        <!-- ✅ Calendar is now outside and flows properly -->
+        <section class="calendar-section">
             <h2 class="calendar-title">🗓 Full Monthly Calendar</h2>
             <div id="calendar"></div>
-          </section>
+        </section>
           
-          <script>
+        <script>
             document.addEventListener("DOMContentLoaded", () => {
               const calendarContainer = document.getElementById("calendar");
           
@@ -78,7 +77,7 @@
           
               renderCalendar(currentMonth, currentYear);
             });
-          </script>
+        </script>
 
         <section class="timeline-banner">
             <h2>📅 Upcoming Workshops</h2>
@@ -96,7 +95,7 @@
                 <p class="timeline-title">Networking Session </p>
               </div>
             </div>
-          </section>
+        </section>
 
         <section class="event-grid">
             <div class="event-card">
@@ -134,7 +133,6 @@
                     <a href="#" class="btn">Details</a>
                 </div>
             </div>
-
         </section>
     </main>
 </body>
