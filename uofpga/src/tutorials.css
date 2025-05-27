@@ -1,0 +1,150 @@
+/* === TUTORIALS PAGE STYLING === */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #100016, #25003c, #4b007c, #7e3dbb);
+    color: white;
+  }
+  
+  header {
+    margin: 30px auto;
+    margin-left: 4%;
+    width: fit-content;
+    padding: 0.8rem 2rem;
+    border-radius: 15px / 15px;
+    background: rgba(90, 24, 154, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 999;
+    transition: background 0.3s ease;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #e8d1ee;
+    text-shadow: 0px 0px 10px #fab7f0;
+  }
+  
+  /* Layout */
+  .tutorial-layout {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 5%;
+    flex-wrap: wrap;
+  }
+  
+.sidebar {
+  flex: 1 1 200px;
+  max-width: 220px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  
+  min-height: 70vh; /* ✅ Makes it extend to full screen height */
+}
+
+  
+  .sidebar h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #ffddff;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li a {
+    display: block;
+    padding: 0.5rem 0;
+    color: #eee;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .sidebar ul li a.active,
+  .sidebar ul li a:hover {
+    color: #ffdd57;
+    font-weight: 700;
+  }
+  
+  .tutorials-content {
+    flex: 3 1 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .tutorial-card {
+    background-color: rgba(255, 255, 255, 0.07);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+  
+  .tutorial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
+  
+  .tutorial-card h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: #ffddff;
+  }
+  
+  .tutorial-card .tags {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #ffcaff;
+    margin: 0.5rem 0;
+  }
+  
+  .tutorial-card .desc {
+    font-size: 0.95rem;
+    color: #e5e5e5;
+  }
+  
+  
+  .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 10px;
+    background-color: #6c2bd9;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #875af5;
+  }

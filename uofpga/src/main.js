@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
             header.classList.remove("scrolled");
         }
     });
-    
 
     // Smooth scrolling for anchor links
     document.querySelectorAll("a[href^='#']").forEach(anchor => {
@@ -21,11 +20,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Animated text appearance effect
-    const animatedText = document.querySelector(".text");
-    animatedText.style.opacity = "0";
-    setTimeout(() => {
-        animatedText.style.opacity = "1";
-        animatedText.style.transition = "opacity 2s ease-in-out";
-    }, 500);
+    // Fade in the H1 once per session
+    const title = document.querySelector(".animated-text");
+    if (!sessionStorage.getItem("heroFadeDone")) {
+        title.classList.add("fade-in-once");
+        sessionStorage.setItem("heroFadeDone", "true");
+    } else {
+        title.classList.remove("fade-in-once");
+    }
+
+    // Fade in the H2 and <p> once per session
+    const subtitle = document.querySelector(".subtitle");
+    const paragraph = document.querySelector(".text p");
+
+    if (!sessionStorage.getItem("subtitleFadeDone")) {
+        subtitle.classList.add("fade-in-once");
+        paragraph.classList.add("fade-in-once");
+        sessionStorage.setItem("subtitleFadeDone", "true");
+    } else {
+        subtitle.classList.remove("fade-in-once");
+        paragraph.classList.remove("fade-in-once");
+    }
 });
