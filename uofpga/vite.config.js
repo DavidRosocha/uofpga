@@ -1,17 +1,17 @@
-// vite.config.js
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vite'
+import { resolve } from 'path'
 
 export default defineConfig({
   base: './',
   build: {
     rollupOptions: {
       input: {
-        main: 'index.html',
-        about: 'About.html',
-        projects: 'projects.html',
-        tutorials: 'tutorials.html',
-        events: 'events.html'
+        main: resolve(__dirname, 'index.html'),
+        about: resolve(__dirname, 'About.html'),
+        projects: resolve(__dirname, 'projects.html'),
+        tutorials: resolve(__dirname, 'tutorials.html'),
+        events: resolve(__dirname, 'events.html')
       }
     }
   }
-});
+})
