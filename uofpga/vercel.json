@@ -1,25 +1,8 @@
 {
-  "functions": {
-    "src/**": {
-      "excludeFiles": "**"
-    }
-  },
   "rewrites": [
-    { "source": "/", "destination": "/index.html" },
     { "source": "/about", "destination": "/About.html" },
     { "source": "/projects", "destination": "/projects.html" },
     { "source": "/tutorials", "destination": "/tutorials.html" },
     { "source": "/events", "destination": "/events.html" }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400"
-        }
-      ]
-    }
   ]
 }
