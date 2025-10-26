@@ -159,10 +159,11 @@ body {
       border: 1px solid rgba(255, 235, 59, 0.45);
     }
     
-    /* Legend styling */
     .calendar-legend {
-      margin-top: 10px;
+      margin-top: 15px;
       display: flex;
+      justify-content: center;   /* ⬅ centers the legend horizontally */
+      align-items: center;       /* ⬅ optional: vertically aligns if wrapping */
       flex-wrap: wrap;
       gap: 8px;
       font-size: 0.9em;
