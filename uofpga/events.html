@@ -22,10 +22,17 @@
     </header>
 
     <main>
-        <!-- ✅ Calendar is now outside and flows properly -->
+        <!-- ✅ Calendar -->
         <section class="calendar-section">
             <h2 class="calendar-title">🗓 Full Monthly Calendar</h2>
             <div id="calendar"></div>
+
+            <!-- Legend -->
+            <div class="calendar-legend">
+                <span class="legend-chip vpu-day">VPU Team (Sunday)</span>
+                <span class="legend-chip general-day">General Meeting (Monday)</span>
+                <span class="legend-chip emulator-day">Emulator Team (Saturday)</span>
+            </div>
         </section>
           
         <script>
@@ -33,16 +40,24 @@
               const calendarContainer = document.getElementById("calendar");
           
               const events = [
-                { title: "Intro to Verilog", date: "2025-06-10" },
-                { title: "FPGA Logic Blocks", date: "2025-06-20" },
+                { title: "Intro to Verilog", date: "2025-09-10" },
+                { title: "FPGA Logic Blocks", date: "2025-09-24" },
               ];
           
               const today = new Date();
               const currentMonth = today.getMonth();
               const currentYear = today.getFullYear();
+
+              function weekdayClass(dow) {
+                // 0=Sun, 1=Mon, ... 6=Sat
+                if (dow === 6) return { cls: "emulator-day", label: "Emulator Team (Saturday)" };
+                if (dow === 1) return { cls: "general-day", label: "General Meeting (Monday)" };
+                if (dow === 0) return { cls: "vpu-day", label: "VPU Team (Sunday)" };
+                return { cls: "", label: "" };
+              }
           
               function renderCalendar(month, year) {
-                const firstDay = new Date(year, month).getDay();
+                const firstDay = new Date(year, month, 1).getDay();
                 const daysInMonth = new Date(year, month + 1, 0).getDate();
           
                 const monthNames = [
@@ -61,14 +76,17 @@
                 }
           
                 for (let day = 1; day <= daysInMonth; day++) {
+                  const dow = new Date(year, month, day).getDay();
+                  const { cls, label } = weekdayClass(dow);
                   const dateStr = `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
                   const match = events.find(e => e.date === dateStr);
           
-                  if (match) {
-                    html += `<div class="calendar-day event-day" title="${match.title}">${day}</div>`;
-                  } else {
-                    html += `<div class="calendar-day">${day}</div>`;
-                  }
+                  const classes = ["calendar-day"];
+                  if (cls) classes.push(cls);
+                  if (match) classes.push("event-day");
+          
+                  const tooltip = match ? match.title : label;
+                  html += `<div class="${classes.join(" ")}" title="${tooltip}">${day}</div>`;
                 }
           
                 html += `</div>`;
@@ -97,43 +115,42 @@
             </div>
         </section>
 
-            <section class="event-grid">
-              <div class="event-card">
-                <h3>Hack the Hill with Ciena</h3>
-                <p class="date">📅 January, 2026</p>
-                <p class="time">⏰ Afternoon Event</p>
-                <p class="tags">⚙ Design Challenge | In Person</p>
-                <p class="desc">Join Ciena FPGA engineers for a hands-on design challenge and networking session. Ciena will present a surprise real-world problem, and teams will spend the afternoon programming creative FPGA-based solutions. Expect prizes, mentorship, and the chance to connect directly with industry engineers.</p>
-                <div class="buttons">
-                  <a href="#" class="btn">RSVP Soon</a>
-                  <a href="#" class="btn">Details</a>
-                </div>
-              </div>
-            
-              <div class="event-card">
-                <h3>Synopsys Networking & Information Session</h3>
-                <p class="date">📅 September 24th, 2025</p>
-                <p class="time">⏰ TBD</p>
-                <p class="tags">⚙ In Person | Industry Panel</p>
-                <p class="desc">Engineers from Synopsys joined us on campus to share insights into digital design in industry. The session featured a panel discussion, Q&amp;A, and one-on-one networking with students interested in hardware and chip design.</p>
-                <div class="buttons">
-                  <a href="https://www.linkedin.com/posts/lukeballinger0_yesterday-i-had-the-pleasure-of-hosting-activity-7377024923959209984-jq2a?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEdSm2gB24_CosTio3FmJTS3lUc_m4GMOTE"
-                     class="btn" target="_blank">Highlights</a>
-                </div>
-              </div>
-            
-              <div class="event-card">
-                <h3>Intro to Verilog</h3>
-                <p class="date">📅 September 10, 2025</p>
-                <p class="time">⏰ TBD</p>
-                <p class="tags">🧰 Beginner | Hybrid</p>
-                <p class="desc">Learn the basics of hardware description using Verilog in this introductory session.</p>
-                <div class="buttons">
-                  <a href="#" class="btn">RSVP</a>
-                  <a href="#" class="btn">TBD</a>
-                </div>
-              </div>
-            </section>
+        <section class="event-grid">
+          <div class="event-card">
+            <h3>Hack the Hill with Ciena</h3>
+            <p class="date">📅 January, 2026</p>
+            <p class="time">⏰ Afternoon Event</p>
+            <p class="tags">⚙ Design Challenge | In Person</p>
+            <p class="desc">Join Ciena FPGA engineers for a hands-on design challenge and networking session. Ciena will present a surprise real-world problem, and teams will spend the afternoon programming creative FPGA-based solutions. Expect prizes, mentorship, and the chance to connect directly with industry engineers.</p>
+            <div class="buttons">
+              <a href="#" class="btn">RSVP Soon</a>
+              <a href="#" class="btn">Details</a>
+            </div>
+          </div>
+        
+          <div class="event-card">
+            <h3>Synopsys Networking & Information Session</h3>
+            <p class="date">📅 September 24th, 2025</p>
+            <p class="time">⏰ TBD</p>
+            <p class="tags">⚙ In Person | Industry Panel</p>
+            <p class="desc">Engineers from Synopsys joined us on campus to share insights into digital design in industry. The session featured a panel discussion, Q&amp;A, and one-on-one networking with students interested in hardware and chip design.</p>
+            <div class="buttons">
+              <a href="https://www.linkedin.com/posts/lukeballinger0_yesterday-i-had-the-pleasure-of-hosting-activity-7377024923959209984-jq2a?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEdSm2gB24_CosTio3FmJTS3lUc_m4GMOTE"
+                 class="btn" target="_blank">Highlights</a>
+            </div>
+          </div>
+        
+          <div class="event-card">
+            <h3>Intro to Verilog</h3>
+            <p class="date">📅 September 10, 2025</p>
+            <p class="time">⏰ TBD</p>
+            <p class="tags">🧰 Beginner | Hybrid</p>
+            <p class="desc">Learn the basics of hardware description using Verilog in this introductory session.</p>
+            <div class="buttons">
+              <a href="#" class="btn">RSVP</a>
+              <a href="#" class="btn">TBD</a>
+            </div>
+          </div>
         </section>
     </main>
 </body>
