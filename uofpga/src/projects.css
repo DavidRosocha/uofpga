@@ -1,4 +1,6 @@
-/* Projects Page Styles */
+/* ==========================
+   Projects Page Styles
+   ========================== */
 
 .projects-section {
   padding: 4rem 5%;
@@ -19,50 +21,25 @@
   color: #ffddff;
 }
 
-.project-card.coming-soon {
-  background-color: rgba(255, 255, 255, 0.04);
-  color: #ccc;
-  border: 2px dashed #875af5;
-  text-align: center;
-  font-style: italic;
-  box-shadow: none;
-}
+/* ==========================
+   Project Cards Layout
+   ========================== */
 
-.project-card.coming-soon h3 {
-  color: #ffccff;
-  font-style: normal;
-}
-
-.project-card.coming-soon {
-  background-color: rgba(255, 255, 255, 0.04);
-  color: #ccc;
-  border: 2px dashed #72619d2b;
-  font-style: italic;
-  box-shadow: none;
-  min-height: 220px;   /* Match height of full cards */
-  min-width: 300px;    /* Match width of full cards */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1.5rem;
-  border-radius: 15px;
-}
-
-
-
-.projects-grid {
+.projects-grid.two-column {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 3rem;
   justify-items: center;
+  align-items: start;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 }
 
 .project-card {
   background: rgba(255, 255, 255, 0.08);
   border-radius: 18px;
   padding: 1.5rem;
-  max-width: 350px;
+  max-width: 450px;
   color: white;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(12px);
@@ -90,7 +67,8 @@
 
 .project-card:hover {
   transform: translateY(-6px) rotateX(2deg);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 221, 255, 0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5),
+              0 0 15px rgba(255, 221, 255, 0.15);
 }
 
 .project-card h3 {
@@ -131,18 +109,10 @@
   transform: scale(1.05);
 }
 
-/* Two-column layout for project cards */
-.projects-grid.two-column {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 3rem;
-  justify-items: center;
-  align-items: stretch;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-}
+/* ==========================
+   Project Gallery Section
+   ========================== */
 
-/* Project Gallery Section */
 .gallery-section {
   margin-top: 3rem;
   padding: 3rem 6%;
@@ -165,71 +135,7 @@
   margin-bottom: 2rem;
 }
 
-/* Responsive image grid for project progress */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  justify-items: center;
-  padding: 0 2rem;
-}
-
-.gallery-grid img {
-  width: 100%;
-  max-width: 360px;
-  border-radius: 14px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  backdrop-filter: blur(8px);
-}
-
-.gallery-grid img:hover {
-  transform: scale(1.05);
-  border-color: rgba(255, 221, 255, 0.35);
-  box-shadow: 0 10px 35px rgba(255, 221, 255, 0.25);
-}
-
-/* Expanded two-column layout for project cards */
-.projects-grid.two-column {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-  gap: 3rem;
-  justify-items: center;
-  align-items: start;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-}
-
-/* Slightly wider cards */
-.project-card {
-  max-width: 450px;
-}
-
-/* Project Gallery Section */
-.gallery-section {
-  margin-top: 3rem;
-  padding: 3rem 6%;
-  text-align: center;
-  background: radial-gradient(circle at top left, rgba(83, 22, 148, 0.15), transparent 10%),
-              radial-gradient(circle at bottom right, rgba(181, 4, 181, 0.05), transparent 20%);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.gallery-section .section-title {
-  font-size: 2rem;
-  margin-bottom: 0.3rem;
-  color: #ffddff;
-}
-
-.gallery-subtitle {
-  font-size: 1rem;
-  color: #c9b8d8;
-  margin-bottom: 2rem;
-}
-
-/* Responsive image grid for project progress */
+/* Responsive grid for images */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -253,4 +159,3 @@
   border-color: rgba(255, 221, 255, 0.35);
   box-shadow: 0 10px 35px rgba(255, 221, 255, 0.25);
 }
-
