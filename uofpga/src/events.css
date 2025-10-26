@@ -142,7 +142,42 @@ body {
   .calendar-day:hover {
     background-color: rgba(255, 255, 255, 0.15);
   }
-  
+    
+    /* WEEKLY HIGHLIGHT COLORS */
+    .calendar-day.emulator-day { /* Saturday - Emulator Team */
+      background: rgba(33, 150, 243, 0.18);
+      border: 1px solid rgba(33, 150, 243, 0.35);
+    }
+    
+    .calendar-day.general-day { /* Monday - General Meeting */
+      background: rgba(156, 39, 176, 0.18);
+      border: 1px solid rgba(156, 39, 176, 0.35);
+    }
+    
+    .calendar-day.vpu-day { /* Sunday - VPU Team */
+      background: rgba(255, 235, 59, 0.28);
+      border: 1px solid rgba(255, 235, 59, 0.45);
+    }
+    
+    /* Legend styling */
+    .calendar-legend {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 0.9em;
+    }
+    
+    .legend-chip {
+      padding: 4px 10px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+    }
+    
+    .legend-chip.vpu-day     { background: rgba(255,235,59,0.28);  border-color: rgba(255,235,59,0.45); }
+    .legend-chip.general-day { background: rgba(156,39,176,0.18);  border-color: rgba(156,39,176,0.35); }
+    .legend-chip.emulator-day{ background: rgba(33,150,243,0.18);  border-color: rgba(33,150,243,0.35); }
+
   .event-day {
     background-color: #ffdd57;
     color: #1a0033;
