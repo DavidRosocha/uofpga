@@ -22,16 +22,15 @@
     </header>
 
     <main>
-        <!-- ✅ Calendar -->
         <section class="calendar-section">
             <h2 class="calendar-title">🗓 Full Monthly Calendar</h2>
             <div id="calendar"></div>
 
-            <!-- Legend -->
             <div class="calendar-legend">
-                <span class="legend-chip vpu-day">VPU Team (Sunday)</span>
-                <span class="legend-chip general-day">General Meeting (Monday)</span>
-                <span class="legend-chip emulator-day">Emulator Team (Saturday)</span>
+                <span class="legend-chip vpu-day">VPU Team</span>
+                <span class="legend-chip general-day">General Meeting</span>
+                <span class="legend-chip protocol-day">Comms Protocol</span>
+                <span class="legend-chip emulator-day">Emulator Team</span>
             </div>
         </section>
           
@@ -49,10 +48,8 @@
               const currentYear = today.getFullYear();
 
               function weekdayClass(dow) {
-                // 0=Sun, 1=Mon, ... 6=Sat
-                if (dow === 6) return { cls: "emulator-day", label: "Emulator Team (Saturday)" };
-                if (dow === 1) return { cls: "general-day", label: "General Meeting (Monday)" };
-                if (dow === 0) return { cls: "vpu-day", label: "VPU Team (Sunday)" };
+                // RECURRING DAYS REMOVED (Stopped in January)
+                // Returning empty strings so no days are highlighted automatically.
                 return { cls: "", label: "" };
               }
           
@@ -100,17 +97,14 @@
         <section class="timeline-banner">
             <h2>📅 Upcoming Workshops</h2>
             <div class="timeline-row">
-              <div class="timeline-card highlight">
-                <p class="timeline-date">October - December</p>
-                <p class="timeline-title">HDL Bits Excercises</p>
-              </div>
-              <div class="timeline-card">
-                <p class="timeline-date">November</p>
-                <p class="timeline-title">Projects Show & Tell</p>
-              </div>
               <div class="timeline-card">
                 <p class="timeline-date">January</p>
                 <p class="timeline-title">Networking Session w/ Ciena </p>
+              </div>
+
+              <div class="timeline-card highlight">
+                <p class="timeline-date">March</p>
+                <p class="timeline-title">Projects Show & Tell</p>
               </div>
             </div>
         </section>
@@ -132,7 +126,7 @@
             <p class="date">📅 September 24th, 2025</p>
             <p class="time">⏰ TBD</p>
             <p class="tags">⚙ In Person | Industry Panel</p>
-            <p class="desc">Engineers from Synopsys joined us on campus to share insights into digital design in industry. The session featured a panel discussion, Q&amp;A, and one-on-one networking with students interested in hardware and chip design.</p>
+            <p class="desc">Engineers from Synopsys joined us on campus to share insights into digital design in industry. The session featured a panel discussion, Q&A, and one-on-one networking with students interested in hardware and chip design.</p>
             <div class="buttons">
               <a href="https://www.linkedin.com/posts/lukeballinger0_yesterday-i-had-the-pleasure-of-hosting-activity-7377024923959209984-jq2a?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEdSm2gB24_CosTio3FmJTS3lUc_m4GMOTE"
                  class="btn" target="_blank">Highlights</a>
