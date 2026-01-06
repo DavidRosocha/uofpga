@@ -6,6 +6,7 @@
   <title>uoFPGA - Projects</title>
   <link rel="stylesheet" href="/src/style.css" />
   <link rel="stylesheet" href="/src/projects.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -27,13 +28,13 @@
 
       <div class="projects-grid">
         
-        <div class="project-card">
+        <div class="project-card featured">
           <h3>Custom FPGA Communication Protocol</h3>
           <p class="tags">Hardware | Verilog | Comms | CRC | CDC</p>
           <p>
             This project designs a full-duplex FPGA-to-FPGA communication system enabling 
-            reliable bidirectional data transfer. The architecture incorporates 8b/10b 
-            [cite_start]line encoding, data scrambling, and cyclic redundancy check (CRC) for error detection[cite: 9, 10]. 
+            [cite_start]reliable bidirectional data transfer[cite: 9]. The architecture incorporates 8b/10b 
+            [cite_start]line encoding, data scrambling, and cyclic redundancy check (CRC) for error detection[cite: 10]. 
             It features master-initiated link initialization and explicit Clock Domain Crossing (CDC) 
             [cite_start]protection, ensuring compatibility between FPGAs with independent clock sources[cite: 11, 12].
           </p>
@@ -67,7 +68,7 @@
     </section>
 
     <section class="proposal-section">
-      <div class="proposal-container">
+      <div class="proposal-content">
         <h2>Start Your Own Project</h2>
         <p>
           Do you have an idea for a hardware design, a new protocol, or an embedded system?
