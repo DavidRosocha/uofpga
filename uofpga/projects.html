@@ -24,8 +24,8 @@
     <section class="projects-section">
       <h1 class="section-title">Our Projects</h1>
 
-      <!-- Two project cards side by side -->
-      <div class="projects-grid two-column">
+      <div class="projects-grid">
+        
         <div class="project-card">
           <h3>Vector Processing Unit (VPU) Team</h3>
           <p class="tags">Hardware | Verilog | FPGA | Parallel Computing</p>
@@ -51,7 +51,30 @@
           </p>
           <a href="https://discord.gg/BVRNSAYwqh" class="btn" target="_blank">Join the Discord</a>
         </div>
+
+        <div class="project-card">
+          <h3>Custom FPGA Communication Protocol</h3>
+          <p class="tags">Hardware | Verilog | Comms | CRC | CDC</p>
+          <p>
+            This project designs a full-duplex FPGA-to-FPGA communication system that enables 
+            reliable bidirectional data transfer[cite: 9]. The architecture incorporates 8b/10b 
+            line encoding, data scrambling, and cyclic redundancy check (CRC) for error detection[cite: 10]. 
+            It features master-initiated link initialization and explicit Clock Domain Crossing (CDC) 
+            protection, ensuring compatibility between FPGAs with independent clock sources[cite: 11, 12].
+          </p>
+          <a href="https://discord.gg/BVRNSAYwqh" class="btn" target="_blank">Join the Discord</a>
+        </div>
+
       </div>
+    </section>
+
+    <section class="proposal-section" style="margin-top: 50px; text-align: center; padding: 40px 20px; background-color: #f9f9f9; border-top: 1px solid #eaeaea;">
+      <h2>Start Your Own Project</h2>
+      <p style="margin-bottom: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Are you interested in setting up a new project or leading a team? 
+        We are always looking for new ideas and initiative. Fill out the form below to get started.
+      </p>
+      <a href="https://forms.gle/2kYNyg1tBxcDNBmH8" class="btn" target="_blank">Project Proposal Form</a>
     </section>
 
   </main>
