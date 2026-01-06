@@ -21,20 +21,33 @@
   </header>
 
   <main>
+    
     <section class="projects-section">
-      <h1 class="section-title">Our Projects</h1>
+      <h1 class="section-title">Current Projects</h1>
 
       <div class="projects-grid">
         
         <div class="project-card">
-          <h3>Vector Processing Unit (VPU) Team</h3>
+          <h3>Custom FPGA Communication Protocol</h3>
+          <p class="tags">Hardware | Verilog | Comms | CRC | CDC</p>
+          <p>
+            This project designs a full-duplex FPGA-to-FPGA communication system enabling 
+            reliable bidirectional data transfer. The architecture incorporates 8b/10b 
+            [cite_start]line encoding, data scrambling, and cyclic redundancy check (CRC) for error detection[cite: 9, 10]. 
+            It features master-initiated link initialization and explicit Clock Domain Crossing (CDC) 
+            [cite_start]protection, ensuring compatibility between FPGAs with independent clock sources[cite: 11, 12].
+          </p>
+          <a href="https://discord.gg/BVRNSAYwqh" class="btn" target="_blank">Join the Discord</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Vector Processing Unit (VPU)</h3>
           <p class="tags">Hardware | Verilog | FPGA | Parallel Computing</p>
           <p>
             The VPU Team is building a scalable Vector Processing Unit in Verilog,
             featuring a custom ALU capable of vector addition, subtraction, multiplication,
-            and dot products. The design supports 32-bit signed vector elements,
-            modular arithmetic components, and a top-level integration framework for
-            FPGA deployment.
+            and dot products. The design supports 32-bit signed vector elements and
+            modular arithmetic components.
           </p>
           <a href="https://discord.gg/BVRNSAYwqh" class="btn" target="_blank">Join the Discord</a>
         </div>
@@ -44,23 +57,8 @@
           <p class="tags">Hardware | RISC-V | SystemVerilog | FPGA</p>
           <p>
             The Emulator Team is developing a custom 32-bit RISC-V (RV32I) CPU from scratch
-            in SystemVerilog, complete with ALU, branch logic, and memory interfacing. The
-            ultimate goal is to integrate the CPU into a retro-style FPGA game console
-            capable of running simple 8-bit and 16-bit games like Pong or Tetris, with
-            dedicated GPU, sound, and I/O modules.
-          </p>
-          <a href="https://discord.gg/BVRNSAYwqh" class="btn" target="_blank">Join the Discord</a>
-        </div>
-
-        <div class="project-card">
-          <h3>Custom FPGA Communication Protocol</h3>
-          <p class="tags">Hardware | Verilog | Comms | CRC | CDC</p>
-          <p>
-            This project designs a full-duplex FPGA-to-FPGA communication system that enables 
-            reliable bidirectional data transfer[cite: 9]. The architecture incorporates 8b/10b 
-            line encoding, data scrambling, and cyclic redundancy check (CRC) for error detection[cite: 10]. 
-            It features master-initiated link initialization and explicit Clock Domain Crossing (CDC) 
-            protection, ensuring compatibility between FPGAs with independent clock sources[cite: 11, 12].
+            in SystemVerilog. The ultimate goal is to integrate the CPU into a retro-style 
+            FPGA game console capable of running simple 8-bit and 16-bit games like Pong or Tetris.
           </p>
           <a href="https://discord.gg/BVRNSAYwqh" class="btn" target="_blank">Join the Discord</a>
         </div>
@@ -68,13 +66,17 @@
       </div>
     </section>
 
-    <section class="proposal-section" style="margin-top: 50px; text-align: center; padding: 40px 20px; background-color: #f9f9f9; border-top: 1px solid #eaeaea;">
-      <h2>Start Your Own Project</h2>
-      <p style="margin-bottom: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
-        Are you interested in setting up a new project or leading a team? 
-        We are always looking for new ideas and initiative. Fill out the form below to get started.
-      </p>
-      <a href="https://forms.gle/2kYNyg1tBxcDNBmH8" class="btn" target="_blank">Project Proposal Form</a>
+    <section class="proposal-section">
+      <div class="proposal-container">
+        <h2>Start Your Own Project</h2>
+        <p>
+          Do you have an idea for a hardware design, a new protocol, or an embedded system?
+          We are always looking for new initiatives. Submit a proposal to lead your own team.
+        </p>
+        <a href="https://forms.gle/2kYNyg1tBxcDNBmH8" class="glow-btn" target="_blank">
+          Project Proposal Form
+        </a>
+      </div>
     </section>
 
   </main>
