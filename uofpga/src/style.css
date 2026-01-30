@@ -370,3 +370,254 @@ nav ul li a:hover {
   text-align: center;
 }
 
+/* ===== NEW ADDITIONS FOR HOMEPAGE UPDATES ===== */
+
+/* Event photos in hero background */
+.event-photos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -9; /* Behind all triangle layers */
+}
+
+.event-photo {
+    position: absolute;
+    width: 45%;
+    height: 65%;
+    object-fit: cover;
+    opacity: 0.15;
+    filter: grayscale(20%) blur(1px);
+    pointer-events: none;
+}
+
+.photo-1 {
+    top: 8%;
+    left: 5%;
+    transform: rotate(-2deg);
+    animation: float1 20s ease-in-out infinite;
+}
+
+.photo-2 {
+    bottom: 8%;
+    right: 5%;
+    transform: rotate(2deg);
+    animation: float2 18s ease-in-out infinite;
+}
+
+@keyframes float1 {
+    0%, 100% {
+        transform: rotate(-2deg) translateY(0);
+    }
+    50% {
+        transform: rotate(-2deg) translateY(-12px);
+    }
+}
+
+@keyframes float2 {
+    0%, 100% {
+        transform: rotate(2deg) translateY(0);
+    }
+    50% {
+        transform: rotate(2deg) translateY(12px);
+    }
+}
+
+/* Showcase section - matching your purple gradient theme */
+.showcase {
+    padding: 80px 5%;
+    background: linear-gradient(to bottom, rgba(16, 0, 22, 0.9), rgba(37, 0, 60, 0.95));
+    position: relative;
+}
+
+.showcase-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.showcase-card {
+    background: rgba(90, 24, 154, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(157, 78, 221, 0.2);
+}
+
+.showcase-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #9d4edd 0%, #c77dff 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.showcase-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px rgba(157, 78, 221, 0.4);
+    background: rgba(110, 50, 190, 0.4);
+    border-color: rgba(157, 78, 221, 0.5);
+}
+
+.showcase-card:hover::before {
+    transform: scaleX(1);
+}
+
+.card-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #9d4edd 0%, #c77dff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    color: white;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(157, 78, 221, 0.3);
+}
+
+.showcase-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 25px rgba(157, 78, 221, 0.5);
+}
+
+.showcase-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(157, 78, 221, 0.3);
+}
+
+.showcase-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #e8d1ee;
+    margin: 0 0 24px 0;
+    flex-grow: 1;
+}
+
+.card-link {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #c77dff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fab7f0;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px #fab7f0;
+}
+
+.card-link:hover {
+    color: #fab7f0;
+    transform: translateX(5px);
+    text-shadow: 0 0 10px #fab7f0;
+}
+
+.card-link:hover::after {
+    width: 100%;
+}
+
+/* Remove empty socials section */
+.socials:empty {
+    display: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .event-photo {
+        width: 60%;
+        height: 50%;
+        opacity: 0.1;
+    }
+
+    .photo-1 {
+        left: -5%;
+    }
+
+    .photo-2 {
+        right: -5%;
+    }
+
+    .showcase {
+        padding: 60px 5%;
+    }
+
+    .showcase-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .showcase-card {
+        padding: 32px 24px;
+    }
+
+    .card-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .showcase-card h3 {
+        font-size: 22px;
+    }
+
+    .showcase-card p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-photo {
+        opacity: 0.08;
+    }
+    
+    .showcase {
+        padding: 50px 4%;
+    }
+
+    .showcase-card {
+        padding: 28px 20px;
+    }
+
+    .card-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .showcase-card h3 {
+        font-size: 20px;
+    }
+}

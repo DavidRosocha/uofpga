@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>uoFPGA - Home</title>
+    <title>uODD - Home</title>
     <link rel="stylesheet" href="/src/style.css">
     <script type="module" src="/src/main.js"></script>
 </head>
@@ -22,15 +22,22 @@
 
     <main>
         <div class="social-icons">
-            <a href="https://www.instagram.com/uofpga?igsh=ZHJseDMzN3c5anN0&utm_source=qr" target="_blank"><img src="/instagram.png" alt="Instagram"></a>
-            <a href="https://www.linkedin.com/company/university-of-ottawa-fpga-club/posts/?feedView=all" target="_blank"><img src="/linkedin.png" alt="LinkedIn"></a>
-            <a href="https://discord.gg/ZN4nzQDm2S" target="_blank"><img src="/discord.png" alt="Discord"></a>
+            <a href="https://www.instagram.com/uofpga?igsh=ZHJseDMzN3c5anN0&utm_source=qr" target="_blank"><img src="/public/instagram.png" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/company/university-of-ottawa-fpga-club/posts/?feedView=all" target="_blank"><img src="/public/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://discord.gg/ZN4nzQDm2S" target="_blank"><img src="/public/discord.png" alt="Discord"></a>
+            <a href="https://github.com/uofpga-collab" target="_blank"><img src="/public/github.png" alt="GitHub"></a>
         </div>
           
-        <img src="/fpgalogo.png" alt="uoFPGA Logo" class="logo-overlay">
+        <img src="/public/fpgalogo.png" alt="uODD Logo" class="logo-overlay">
 
         <section class="hero">
-            <!-- Triangle fade layers -->
+            <!-- Background event photos with subtle opacity -->
+            <div class="event-photos">
+                <img src="/public/pimage1.png" alt="" class="event-photo photo-1">
+                <img src="/public/pimage2.png" alt="" class="event-photo photo-2">
+            </div>
+
+            <!-- Triangle fade layers (keeping your existing structure) -->
             <div class="triangle-layer layer-1"></div>
             <div class="triangle-layer layer-2"></div>
             <div class="triangle-layer layer-3"></div>
@@ -41,12 +48,51 @@
             <div class="text">
               <h1 class="animated-text">Welcome to uODD</h1>
               <h2 class="subtitle">University of Ottawa Digital Design Club</h2>
-              <p>The University of Ottawa FPGA Club is dedicated to helping students learn and apply FPGA programming and digital design skills through projects and events.</p>
+              <p>The University of Ottawa Digital Design Club is dedicated to helping students learn and apply FPGA programming and digital design skills through projects and events.</p>
             </div>
         </section>
 
-        <section class="socials">
-           
+        <section class="showcase">
+            <div class="showcase-container">
+                <div class="showcase-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </div>
+                    <h3>Our Projects</h3>
+                    <p>Explore our collaborative FPGA and digital design projects on GitHub</p>
+                    <a href="https://github.com/uofpga-collab" target="_blank" class="card-link">View on GitHub →</a>
+                </div>
+
+                <div class="showcase-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                    </div>
+                    <h3>Upcoming Events</h3>
+                    <p>Join our workshops, competitions, and community gatherings</p>
+                    <a href="/events.html" class="card-link">See Events →</a>
+                </div>
+
+                <div class="showcase-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Join Our Community</h3>
+                    <p>Connect with fellow students passionate about digital design</p>
+                    <a href="https://discord.gg/ZN4nzQDm2S" target="_blank" class="card-link">Join Discord →</a>
+                </div>
+            </div>
         </section>
     </main>
 </body>
